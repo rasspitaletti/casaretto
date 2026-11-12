@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casaretto Pasta &amp; Vinho | Restaurante Italiano em Piracicaba</title>
+<meta name="description" content="Conheça o Casaretto Pasta & Vinho, restaurante italiano em Piracicaba. Explore o cardápio, descubra nossa gastronomia e encontre informações de contato e localização.">
+<meta name="theme-color" content="var(--ink)">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Casaretto Pasta & Vinho | Restaurante Italiano em Piracicaba">
+<meta property="og:description" content="Massas próprias e caseiras, pratos quentes da cozinha italiana e carta de vinhos no bairro Alto, em Piracicaba.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80">
+<!-- Canonical: ativar quando o domínio definitivo for confirmado
+<link rel="canonical" href="https://www.casarettopastaevinho.com.br/"> -->
+
+<!-- Fallback de imagens: troca por foto reserva ou esconde a imagem quebrada -->
+<script>
+document.addEventListener('error', function (e) {
+  var img = e.target;
+  if (!img || img.tagName !== 'IMG') return;
+  var fb = img.getAttribute('data-fallback');
+  if (fb && !img.dataset.tried) { img.dataset.tried = '1'; img.src = fb; return; }
+  var box = img.closest('.ph') || img.parentElement;
+  if (box) box.classList.add('is-broken');
+  img.style.visibility = 'hidden';
+}, true);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Parisienne&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink: 'var(--ink)', card: '#1C1B1A', laranja: '#D98A4A', creme: '#F4EFE5' },
+  fontFamily: { display: ['Lexend', 'sans-serif'], sans: ['Inter', 'sans-serif'] }
+}}};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Casaretto Pasta & Vinho",
+  "servesCuisine": "Italiana",
+  "telephone": "+55 19 3433-6785",
+  "url": "http://www.casarettopastaevinho.com.br/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Aquilino Pacheco, 412",
+    "addressLocality": "Piracicaba",
+    "addressRegion": "SP",
+    "postalCode": "13419-150",
+    "addressCountry": "BR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -22.7262942, "longitude": -47.6352385 },
+  "sameAs": ["https://www.instagram.com/casarettopastaevinho/", "https://linktr.ee/casarettopastavinho"]
+}
+</script>
+
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  --bg:#35251A; --bg-2:#2B1D14; --card:#43301F; --card-2:#4E3927;
+  --laranja:#D98A4A; --laranja-2:#E8A469; --marrom:#5C3F28;
+  --ink:#2A1B12; /* texto sobre terracota */
+  --verde:#1F7A4C; --vermelho:#B5202E; /* bandeira */
+  --texto:#F3E8DA; --cinza:#C6B3A0; --cinza-2:#9C8773;
+  --borda:rgba(217,138,74,.34); --borda-suave:rgba(243,232,218,.13);
+  --r:14px; --ease:cubic-bezier(.22,.8,.24,1);
+  --h:84px;
+  --s-0:clamp(.92rem,.88rem + .2vw,1rem);
+  --s-2:clamp(1.6rem,1.3rem + 1.4vw,2.5rem);
+  --s-4:clamp(2.6rem,1.8rem + 3.8vw,5rem);
+  --sec:clamp(4.5rem,3.5rem + 5vw,8rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--h) + 10px)}
+body{margin:0;background:var(--bg);color:var(--texto);font-family:Inter,system-ui,sans-serif;font-size:var(--s-0);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* Fundo do site: camadas suaves fixas + textura de linho discreta */
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse 85% 55% at 8% 0%,rgba(217,138,74,.10),transparent 62%),
+    radial-gradient(ellipse 70% 50% at 95% 26%,rgba(243,232,218,.09),transparent 68%),
+    radial-gradient(ellipse 90% 45% at 50% 100%,rgba(217,138,74,.08),transparent 70%),
+    linear-gradient(175deg,#3E2C1E 0%,#35251A 45%,#2A1C13 100%)}
+/* Bandeira da Itália: faixa de tecido ondulada atravessando o fundo */
+#bg-flag{position:fixed;top:50%;left:50%;z-index:-1;pointer-events:none;
+  width:200vmax;height:46vmax;transform:translate(-50%,-50%) rotate(-21deg);
+  opacity:.88;filter:saturate(1.35) contrast(1.08) drop-shadow(0 30px 60px rgba(0,0,0,.55));
+  -webkit-mask-image:linear-gradient(90deg,transparent 2%,#000 22%,#000 78%,transparent 98%);
+  mask-image:linear-gradient(90deg,transparent 2%,#000 22%,#000 78%,transparent 98%)}
+#bg-flag svg{width:100%;height:100%;display:block}
+@media(max-width:700px){#bg-flag{opacity:.75;height:78vmax}}
+#bg-tex{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:
+    linear-gradient(rgba(243,232,218,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(243,232,218,.05) 1px,transparent 1px);
+  background-size:72px 72px,72px 72px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 35%,#000,transparent 85%);
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 35%,#000,transparent 85%)}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--laranja);color:var(--ink)}
+:focus-visible{outline:2px solid var(--laranja);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 2*clamp(16px,4vw,40px));margin-inline:auto}
+.display{font-family:Lexend,sans-serif;font-weight:500;letter-spacing:-.01em;line-height:1.08;margin:0}
+.or{color:var(--laranja)}
+.eyebrow{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--laranja);font-weight:500;margin:0 0 .9rem}
+.h2{font-size:var(--s-2)}
+.muted{color:var(--cinza)}
+.sec{padding-block:var(--sec)}
+/* Faixa alternada translúcida, com filetes de luz no topo e na base */
+.sec-alt{position:relative;background:linear-gradient(180deg,rgba(43,29,20,.45),rgba(35,23,15,.58));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.sec-alt::before,.sec-alt::after{content:"";position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,138,74,.3),transparent)}
+.sec-alt::before{top:0}.sec-alt::after{bottom:0}
+.center{text-align:center}
+.script{font-family:Parisienne,cursive;color:var(--laranja);font-size:1.9rem;letter-spacing:.06em;line-height:1}
+
+/* ===================== BOTÕES ===================== */
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.25rem;border-radius:6px;border:1px solid var(--borda-suave);
+  font:500 .76rem/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;
+  background:transparent;color:var(--texto);transition:background-color .35s var(--ease),border-color .35s var(--ease),color .35s var(--ease),transform .35s var(--ease)}
+.btn svg{width:15px;height:15px;transition:transform .35s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover svg{transform:translateX(3px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--marrom);border-color:var(--laranja);color:var(--texto)}
+.btn-primary:hover{background:var(--laranja);border-color:var(--laranja);color:var(--ink)}
+.btn-outline{border-color:rgba(243,232,218,.42)}
+.btn-outline:hover{border-color:var(--laranja);color:var(--laranja)}
+.btn-solid{background:var(--laranja);border-color:var(--laranja);color:var(--ink);font-weight:600}
+.btn-solid:hover{background:var(--laranja-2)}
+
+/* ===================== HEADER ===================== */
+.header{position:fixed;inset:0 0 auto;z-index:60;height:var(--h);display:flex;align-items:center;transition:background-color .4s var(--ease),border-color .4s,height .4s var(--ease);border-bottom:1px solid transparent}
+.header.is-scrolled{--h:70px;background:rgba(43,29,20,.55);-webkit-backdrop-filter:blur(20px) saturate(1.3);backdrop-filter:blur(20px) saturate(1.3);border-bottom-color:rgba(243,232,218,.14);box-shadow:0 10px 30px -20px rgba(0,0,0,.8)}
+.logo{text-decoration:none;display:inline-flex;flex-direction:column;line-height:.86;font-family:"Cormorant Garamond",serif;font-weight:600}
+.logo span:first-child{font-size:1.75rem;letter-spacing:.01em}
+.logo span:last-child{font-size:1.05rem;padding-left:1.3rem;font-style:italic;font-weight:500;color:var(--cinza)}
+.nav a{position:relative;text-decoration:none;font-size:.74rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--cinza);padding:.4rem 0;transition:color .3s}
+.nav a:hover,.nav a.is-active{color:var(--texto)}
+.nav a::after{content:"";position:absolute;left:50%;bottom:-6px;width:18px;height:2px;border-radius:2px;background:var(--laranja);transform:translateX(-50%) scaleX(0);transition:transform .35s var(--ease)}
+.nav a.is-active::after{transform:translateX(-50%) scaleX(1)}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;color:var(--texto);text-decoration:none;background:transparent;border:0;cursor:pointer;transition:color .3s,background-color .3s}
+.icon-btn:hover{color:var(--laranja);background:rgba(243,232,218,.06)}
+.icon-btn svg{width:18px;height:18px}
+.mobile-nav{position:fixed;inset:0;z-index:70;background:rgba(43,29,20,.82);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);display:flex;flex-direction:column;padding:calc(var(--h) + 1rem) 24px 2rem;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.mobile-nav.is-open{opacity:1;visibility:visible}
+.mobile-nav a.l{font:500 1.9rem/1.2 Lexend,sans-serif;text-decoration:none;padding:.7rem 0;border-bottom:1px solid var(--borda-suave)}
+.mobile-nav a.l:hover{color:var(--laranja)}
+
+/* ===================== HERO ===================== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:safe center;padding-top:var(--h);overflow:hidden;background:transparent}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42;mix-blend-mode:luminosity;filter:contrast(1.1)}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(43,29,20,.9) 0%,rgba(43,29,20,.7) 38%,rgba(43,29,20,.22) 70%,rgba(43,29,20,.45) 100%),
+             radial-gradient(ellipse 70% 60% at 72% 45%,rgba(217,138,74,.12),transparent 70%),
+             linear-gradient(to top,rgba(53,37,26,.92) 2%,transparent 30%)}
+.hero-grid{position:relative;z-index:2;display:grid;gap:3rem;align-items:center;padding-block:3rem 4.5rem;min-height:calc(100svh - var(--h))}
+@media(min-width:1000px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:clamp(2rem,4vw,4rem)}}
+.hero-text{position:relative;z-index:2;max-width:620px}
+.hero h1{font-size:clamp(2.4rem,min(1.5rem + 3.3vw,9.5vh),4.6rem);font-weight:400;letter-spacing:-.015em;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+.hero .sub{max-width:40ch;color:#E3D5C4;margin:1.6rem 0 2rem}
+.plate-wrap{position:relative;z-index:1;aspect-ratio:1;width:min(460px,86vw);margin-inline:auto}
+@media(min-width:1000px){.plate-wrap{width:min(500px,42vw)}}
+@media(max-width:999px){.plate-wrap{order:-1;width:min(330px,72vw)}}
+.plate{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#3E2C1E;
+  box-shadow:0 0 0 10px #2C1E15,0 0 0 11px rgba(243,232,218,.09),0 50px 90px -30px rgba(0,0,0,.55),0 0 120px rgba(217,138,74,.12)}
+.plate img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1.08)}
+.plate::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 60px rgba(243,232,218,.13)}
+.plate-ring{position:absolute;inset:-5.5%;z-index:2;border-radius:50%;border:1px solid rgba(217,138,74,.3);pointer-events:none}
+.plate-ring::after{content:"";position:absolute;inset:-5%;border-radius:50%;border:1px dashed rgba(217,138,74,.14)}
+.badge{position:absolute;right:-2%;bottom:1%;z-index:3;width:clamp(92px,22vw,116px);aspect-ratio:1;border-radius:50%;border:1px solid var(--laranja);
+  display:grid;place-items:center;text-align:center;background:rgba(43,29,20,.55);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);color:var(--laranja);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.badge small{display:block;font-size:.58rem;letter-spacing:.18em}
+.badge strong{display:block;font:500 .92rem/1.15 "Cormorant Garamond",serif;letter-spacing:.14em;color:var(--texto);margin:.25rem 0}
+.feats{display:grid;grid-template-columns:repeat(3,auto);gap:0;justify-content:start;margin-top:2.6rem}
+.feat{display:flex;gap:.7rem;align-items:flex-start;padding:0 1.2rem;border-left:1px solid rgba(217,138,74,.35)}
+.feat:first-child{padding-left:0;border-left:0}
+.feat svg{width:22px;height:22px;color:var(--laranja);flex:0 0 auto;margin-top:2px}
+.feat b{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--laranja);font-weight:500;line-height:1.3}
+.feat span{display:block;font-size:.74rem;color:var(--cinza);margin-top:.2rem}
+@media(max-width:560px){.feats{grid-template-columns:1fr;gap:1rem}.feat{border-left:0;padding:0}}
+
+/* ===================== FOTOS ===================== */
+.ph{position:relative;overflow:hidden;background:#4A3527}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .6s var(--ease)}
+.ph.is-broken{background:linear-gradient(135deg,#4A3527,#33231A)}
+.ph.is-broken::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem;font:500 1.1rem Lexend,sans-serif;color:var(--laranja)}
+.credit{font-size:.7rem;color:var(--cinza-2);margin-top:.7rem}
+
+/* ===================== ESPECIAIS ===================== */
+.dishes{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media(min-width:600px){.dishes{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.dishes{grid-template-columns:repeat(4,1fr)}}
+.dish{background:var(--card);border:1px solid var(--borda);border-radius:var(--r);padding:.8rem;display:flex;flex-direction:column;transition:transform .45s var(--ease),border-color .45s,background-color .45s}
+.dish:hover{transform:translateY(-6px);border-color:var(--laranja);background:var(--card-2)}
+.dish .ph{border-radius:10px;aspect-ratio:1/1}
+.dish:hover .ph img{transform:scale(1.06);filter:contrast(1.06)}
+.dish h3{font:500 1.02rem/1.3 Lexend,sans-serif;color:var(--laranja);margin:1rem .3rem .35rem}
+.dish p{font-size:.78rem;line-height:1.5;color:var(--cinza);margin:0 .3rem 1rem;flex:1}
+.dish-foot{display:flex;align-items:center;justify-content:space-between;padding:0 .3rem .2rem}
+.dish-foot span{font:500 1.15rem Lexend,sans-serif;color:var(--texto)}
+.dish-foot small{display:block;font:400 .66rem Inter,sans-serif;color:var(--cinza-2);letter-spacing:.04em}
+.bag{width:38px;height:38px;border-radius:50%;border:1px solid rgba(243,232,218,.32);display:grid;place-items:center;color:var(--texto);text-decoration:none;transition:all .35s var(--ease)}
+.bag svg{width:16px;height:16px}
+.bag:hover{background:var(--laranja);border-color:var(--laranja);color:var(--ink)}
+
+/* ===================== CARDÁPIO ===================== */
+.menu-shell{background:var(--bg-2);border:1px solid var(--borda-suave);border-radius:20px;padding:clamp(1.3rem,3.4vw,2.8rem)}
+.menu-bar{position:sticky;top:calc(var(--h) - 1px);z-index:30;background:rgba(43,29,20,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  padding:1.15rem 1.3rem;display:flex;flex-direction:column;gap:1rem;border:1px solid var(--borda-suave);border-radius:14px}
+@media(min-width:1180px){.menu-bar{flex-direction:row;align-items:center;justify-content:space-between;gap:1.6rem}}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;padding:0}
+@media(max-width:700px){.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:.72rem 1.1rem;border-radius:6px;border:1px solid var(--borda-suave);background:transparent;color:var(--cinza);
+  font:500 .72rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease)}
+.chip small{color:var(--cinza-2);margin-left:.3rem;font-size:.66rem}
+.chip:hover{color:var(--texto);border-color:var(--borda)}
+.chip[aria-pressed="true"]{background:var(--marrom);border-color:var(--laranja);color:var(--texto)}
+.chip[aria-pressed="true"] small{color:var(--laranja)}
+.search{position:relative;min-width:min(100%,280px);flex:0 0 auto}
+@media(min-width:1180px){.search{width:300px}}
+.search input{width:100%;background:rgba(36,24,16,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--borda-suave);border-radius:6px;padding:.75rem 2.4rem;color:var(--texto);font:400 .86rem Inter,sans-serif}
+.search input::placeholder{color:var(--cinza-2)}
+.search input:focus{outline:none;border-color:var(--laranja)}
+.search .s-i{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--cinza)}
+.search .s-x{position:absolute;right:.4rem;top:50%;transform:translateY(-50%);width:30px;height:30px;border:0;background:transparent;color:var(--cinza);cursor:pointer;display:none;place-items:center}
+.search.has-value .s-x{display:grid}
+.mcat{padding-top:3rem}
+.mcat-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-bottom:1.2rem}
+.mcat-head h3{font:500 1.6rem/1.1 Lexend,sans-serif;margin:0}
+.mcat-head span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza-2)}
+.mgroup{margin-bottom:1.8rem}
+.mgroup-t{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);font-weight:500;margin:0 0 .3rem}
+.mgroup-h{font-size:.82rem;color:var(--cinza);margin:0 0 .4rem}
+.mlist{list-style:none;margin:0;padding:0;display:grid;column-gap:3.5rem}
+@media(min-width:860px){.mlist{grid-template-columns:1fr 1fr}}
+.mitem{padding:1.25rem .5rem;border-bottom:1px solid var(--borda-suave);display:grid;grid-template-columns:64px 1fr;gap:1.2rem;align-items:center}
+.mitem .thumb{width:64px;height:64px;border-radius:10px;border:1px solid var(--borda);overflow:hidden}
+.mitem .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.mitem:hover .thumb img{transform:scale(1.08)}
+.mitem .thumb.is-broken::after{content:""}
+.mbody{min-width:0}
+@media(min-width:600px){.mitem{grid-template-columns:80px 1fr;gap:1.4rem}.mitem .thumb{width:80px;height:80px}}
+.mrow{display:flex;align-items:baseline;gap:.6rem}
+.mrow h4{margin:0;font:500 .98rem/1.3 Lexend,sans-serif;color:var(--texto)}
+.mrow .dots{flex:1;border-bottom:1px dotted rgba(0,0,0,.55);transform:translateY(-4px);min-width:1rem}
+.mrow .price{flex:0 0 auto;font:500 .98rem Lexend,sans-serif;background:linear-gradient(100deg,#F0BC86,#D98A4A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-note{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--cinza);border:1px solid var(--borda);border-radius:999px;padding:.35rem .8rem}
+.mrow .tag{flex:0 0 auto;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--laranja);border:1px solid var(--borda);border-radius:4px;padding:.22rem .45rem}
+.mitem p{margin:.45rem 0 0;font-size:.82rem;line-height:1.5;color:var(--cinza)}
+.mfoot{display:flex;gap:1.1rem;margin-top:.45rem;font-size:.7rem;letter-spacing:.04em}
+.mfoot a{text-decoration:none;color:var(--cinza-2);display:inline-flex;align-items:center;gap:.3rem;transition:color .3s}
+.mfoot a:hover{color:var(--laranja)}
+.mfoot svg{width:12px;height:12px}
+mark{background:rgba(217,138,74,.25);color:inherit;border-radius:2px}
+.wine{display:grid;border:1px solid var(--borda);border-radius:var(--r);overflow:hidden;background:var(--card)}
+@media(min-width:860px){.wine{grid-template-columns:1.2fr 1fr}}
+.wine-b{padding:clamp(1.4rem,3vw,2.4rem)}
+.wine-b ul{list-style:none;margin:1.2rem 0 1.6rem;padding:0;display:grid;gap:.55rem}
+.wine-b li{display:flex;gap:.6rem;align-items:center;font-size:.86rem;color:var(--cinza)}
+.wine-b li svg{width:15px;height:15px;color:var(--laranja)}
+.wine .ph{min-height:240px}
+/* Botão único "Ver cardápio completo" com esmaecido por cima */
+.all-wrap{position:relative;display:flex;justify-content:center;padding-top:1.6rem;margin-top:.4rem}
+.all-wrap.is-preview::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:110px;pointer-events:none;
+  background:linear-gradient(to bottom,transparent,rgba(40,27,18,.9))}
+.all-btn{padding:1rem 1.8rem}
+.all-btn svg{width:15px;height:15px;transition:transform .35s var(--ease)}
+.all-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.all-btn b{font-weight:600;letter-spacing:.06em;opacity:.85}
+/* Listas longas: recolhidas com botão "Ver mais" */
+.mlist.is-collapsed .mitem.extra{display:none}
+.more-wrap{display:flex;justify-content:center;margin-top:1.1rem}
+.more-btn{padding:.7rem 1.4rem;font-size:.72rem}
+.more-btn svg{width:14px;height:14px;transition:transform .35s var(--ease)}
+.more-btn:hover svg{transform:none}
+.more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.more-btn b{font-weight:500;color:var(--laranja);letter-spacing:.06em}
+.empty{display:none;text-align:center;padding:3rem 1rem}
+.empty.on{display:block}
+
+/* ===================== HISTÓRIA ===================== */
+.story{display:grid;gap:3rem;align-items:center}
+@media(min-width:1000px){.story{grid-template-columns:.95fr 1.4fr}}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;margin-top:2.2rem}
+.stat{padding:0 1.6rem;border-left:1px solid rgba(217,138,74,.35)}
+.stat:first-child{padding-left:0;border-left:0}
+.stat strong{display:block;font:400 1.35rem Lexend,sans-serif;color:var(--laranja)}
+.stat span{font-size:.74rem;color:var(--cinza)}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:.9rem;aspect-ratio:3/2}
+.gallery .ph{border-radius:var(--r);border:1px solid var(--borda)}
+.gallery .big{grid-row:span 2}
+.gallery .ph{height:100%;min-height:0}
+.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery .ph:hover img{transform:scale(1.05)}
+@media(max-width:560px){.stats{grid-template-columns:1fr 1fr 1fr}.stat{padding:0 .8rem}}
+
+/* Legibilidade sobre a faixa branca da bandeira */
+.sec .h2,.sec .eyebrow,.sec .center .muted,.mcat-head h3,.sec h2{text-shadow:0 1px 16px rgba(30,20,13,.6),0 0 2px rgba(30,20,13,.35)}
+/* Placa de vidro atrás dos títulos de seção (legíveis sobre a bandeira) */
+.sec-head{position:relative;padding:clamp(1.1rem,2.4vw,1.8rem) clamp(1.2rem,3vw,2.2rem);border-radius:18px;
+  background:linear-gradient(155deg,rgba(58,40,27,.72),rgba(36,24,16,.8));
+  border:1px solid rgba(243,232,218,.16);
+  -webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);
+  box-shadow:0 24px 50px -30px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.08)}
+.sec-head.center{max-width:680px;margin-inline:auto}
+#contato .sec-head{max-width:640px}
+.sec-head-wide{max-width:none}
+/* Faixa tricolor */
+.tri-eyebrow{display:inline-flex;align-items:center;gap:.8rem}
+.tricolore{display:inline-flex;height:4px;width:42px;border-radius:2px;overflow:hidden;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.tricolore i{flex:1}
+.tricolore i:nth-child(1){background:#009246}.tricolore i:nth-child(2){background:#F1F2EC}.tricolore i:nth-child(3){background:#CE2B37}
+.hero h1 .or{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:1.16em;letter-spacing:0;line-height:1}
+
+/* ===================== AMBIENTE ===================== */
+.amb{display:grid;gap:.9rem;grid-template-columns:repeat(2,1fr)}
+.amb .ph{border-radius:var(--r);border:1px solid var(--borda);aspect-ratio:4/3}
+.amb .a1{grid-column:span 2;aspect-ratio:16/10}
+@media(min-width:760px){
+  .amb{grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;
+    grid-template-areas:"a1 a1 a2 a3" "a1 a1 a4 a4" "a5 a6 a6 a7" "a5 a8 a8 a7"}
+  .amb .ph{aspect-ratio:auto;height:100%}
+  .amb .a1{grid-area:a1;aspect-ratio:auto}.amb .a2{grid-area:a2}.amb .a3{grid-area:a3}.amb .a4{grid-area:a4}
+  .amb .a5{grid-area:a5}.amb .a6{grid-area:a6}.amb .a7{grid-area:a7}.amb .a8{grid-area:a8}}
+.amb .ph img{filter:saturate(.92) brightness(.92);transition:transform .9s var(--ease),filter .6s var(--ease)}
+.amb .ph:hover img{transform:scale(1.05);filter:saturate(1) brightness(1)}
+.amb figcaption{position:absolute;inset:auto 0 0;z-index:2;padding:1.4rem .95rem .8rem;
+  font:500 .72rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--texto);
+  background:linear-gradient(to top,rgba(26,17,11,.82),transparent);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+
+/* ===================== AVALIAÇÕES ===================== */
+.avatars{display:flex}
+.avatars span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:500 .7rem Lexend,sans-serif;border:2px solid var(--bg);margin-left:-9px;color:var(--ink)}
+.avatars span:first-child{margin-left:0}
+.reviews{display:grid;gap:1.4rem;align-items:center}
+@media(min-width:900px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.review{background:var(--card);border:1px solid var(--borda);border-radius:var(--r);padding:1.6rem 1.6rem 1.4rem;display:flex;flex-direction:column;min-height:260px;transition:transform .45s var(--ease),border-color .45s}
+.review:hover{transform:translateY(-4px);border-color:var(--laranja)}
+@media(min-width:900px){.review.mid{min-height:300px}}
+.review-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.3rem}
+.review .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:500 .9rem Lexend,sans-serif;color:var(--ink)}
+.review .q{font:700 3rem/1 Georgia,serif;color:var(--laranja);height:1.6rem}
+.review blockquote{margin:0;font-size:.92rem;line-height:1.65;color:#E3D5C4;flex:1}
+.review figcaption{margin-top:1.4rem;padding-top:1rem;border-top:1px solid rgba(217,138,74,.4)}
+.review figcaption b{display:block;font:500 .86rem Lexend,sans-serif;color:var(--laranja)}
+.review figcaption span{font-size:.76rem;color:var(--cinza)}
+
+/* ===================== LOCALIZAÇÃO ===================== */
+.loc{display:grid;gap:1.4rem}
+@media(min-width:1000px){.loc{grid-template-columns:.9fr 1.4fr}}
+.loc-card{background:var(--card);border:1px solid var(--borda);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.2rem)}
+.info{display:grid;gap:1.3rem;margin:1.8rem 0 2rem;padding:0;list-style:none}
+.info li{display:flex;gap:.9rem}
+.info svg{width:18px;height:18px;color:var(--laranja);flex:0 0 auto;margin-top:3px}
+.info b{display:block;font:500 .72rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza-2);margin-bottom:.15rem}
+.info a{text-decoration:none}
+.info a:hover{color:var(--laranja)}
+.info small{display:block;color:var(--cinza-2);font-size:.74rem;margin-top:.2rem}
+.map{position:relative;border:1px solid var(--borda);border-radius:var(--r);overflow:hidden;min-height:440px;background:#3E2C1E}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.55) brightness(.92) contrast(.95)}
+
+/* ===================== FOOTER ===================== */
+.footer{padding-top:4.5rem;background:linear-gradient(180deg,transparent,rgba(28,18,12,.8))}
+.footer h4{font:500 .76rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:0 0 1.2rem}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.footer a{text-decoration:none;color:var(--cinza);transition:color .3s}
+.footer a:hover{color:var(--laranja)}
+.f-contact li{display:flex;gap:.7rem;font-size:.84rem;color:var(--cinza)}
+.f-contact svg{width:16px;height:16px;color:var(--laranja);flex:0 0 auto;margin-top:3px}
+.social{display:flex;gap:.55rem;margin-top:1.4rem}
+.social a{width:36px;height:36px;border-radius:50%;border:1px solid var(--laranja);display:grid;place-items:center;color:var(--laranja)}
+.social a:hover{background:var(--laranja);color:var(--ink)}
+.social svg{width:15px;height:15px}
+.reserve-box{display:flex;border:1px solid var(--borda-suave);border-radius:6px;overflow:hidden;margin-top:1rem}
+.reserve-box span{flex:1;padding:.75rem .9rem;font-size:.78rem;color:var(--cinza-2);background:#3E2C1E}
+.reserve-box a{background:var(--laranja);color:var(--ink)!important;font:600 .7rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:.75rem 1rem;display:grid;place-items:center}
+.reserve-box a:hover{background:var(--laranja-2)}
+.f-bottom{margin-top:3.5rem;border-top:1px solid rgba(217,138,74,.5);padding:1.3rem 0 1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;font-size:.76rem;color:var(--cinza)}
+
+/* ===================== ATALHOS DISCRETOS ===================== */
+.quick{position:fixed;right:clamp(12px,2vw,24px);bottom:calc(clamp(12px,2vw,24px) + env(safe-area-inset-bottom));z-index:50;
+  display:flex;flex-direction:column;gap:.5rem;opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .5s var(--ease),transform .5s var(--ease),visibility .5s}
+.quick.is-visible{opacity:1;visibility:visible;transform:none}
+.quick a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:var(--cinza);
+  background:rgba(43,29,20,.5);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);border:1px solid rgba(217,138,74,.28);
+  transition:color .35s var(--ease),border-color .35s var(--ease),background-color .35s var(--ease),transform .35s var(--ease)}
+.quick a:hover,.quick a:focus-visible{color:var(--laranja);border-color:var(--laranja);background:rgba(43,29,20,.96);transform:translateY(-2px)}
+.quick svg{width:18px;height:18px}
+@media(max-width:600px){.quick a{width:38px;height:38px}.quick svg{width:16px;height:16px}}
+
+/* ===================== ACABAMENTO PREMIUM ===================== */
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.or{background:linear-gradient(100deg,#F0BC86 0%,#D98A4A 45%,#B5702F 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{letter-spacing:.32em;font-size:.7rem}
+.display{font-weight:400}
+.h2{letter-spacing:-.02em}
+.sec{position:relative}
+#especiais::before,#avaliacoes::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 40% at 50% 0%,rgba(217,138,74,.07),transparent 70%)}
+.ornament{display:block;margin:1.1rem auto 0;width:52px;height:14px;color:var(--laranja);opacity:.8}
+
+/* ===================== VIDRO FOSCO ===================== */
+/* Painéis translúcidos que desfocam a bandeira ao fundo */
+.dish,.review,.loc-card,.wine,.menu-shell{
+  border:1px solid transparent!important;
+  background:linear-gradient(155deg,rgba(70,50,34,.68),rgba(45,31,21,.78)) padding-box,
+             linear-gradient(150deg,rgba(243,232,218,.5),rgba(243,232,218,.1) 38%,rgba(243,232,218,.06) 62%,rgba(217,138,74,.42)) border-box!important;
+  -webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blur(16px) saturate(1.25);
+  box-shadow:0 30px 60px -40px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.07)}
+.menu-shell{background:linear-gradient(160deg,rgba(66,47,32,.72),rgba(40,27,18,.82)) padding-box,
+            linear-gradient(150deg,rgba(243,232,218,.42),rgba(243,232,218,.08) 40%,rgba(217,138,74,.3)) border-box!important;
+  -webkit-backdrop-filter:blur(22px) saturate(1.3);backdrop-filter:blur(22px) saturate(1.3);
+  box-shadow:0 40px 90px -50px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.07)}
+.menu-bar{-webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);background:rgba(43,29,20,.55)}
+.wine-b{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.spot{position:relative;isolation:isolate;overflow:hidden}
+.spot::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .5s var(--ease);
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(217,138,74,.14),transparent 65%)}
+.spot:hover::before{opacity:1}
+.dish{box-shadow:0 30px 60px -40px rgba(0,0,0,.5)}
+.dish:hover{box-shadow:0 40px 70px -35px rgba(0,0,0,.55),0 0 40px -12px rgba(217,138,74,.35)}
+
+/* Brilho que atravessa uma vez */
+.btn,.dish .ph,.gallery .ph{position:relative;overflow:hidden}
+.btn::after,.dish .ph::before,.gallery .ph::before{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:2;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);transition:left 0s}
+.btn:hover::after,.dish:hover .ph::before,.gallery .ph:hover::before{left:130%;transition:left .9s var(--ease)}
+
+/* Abertura */
+#intro{position:fixed;inset:0;z-index:100;background:#2B1D14;display:grid;place-items:center;text-align:center}
+#intro .logo{pointer-events:none}
+#intro .logo span:first-child{font-size:clamp(2.6rem,7vw,4.2rem)}
+#intro .logo span:last-child{font-size:clamp(1.2rem,3vw,1.6rem)}
+#intro .glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(217,138,74,.22),transparent 65%);filter:blur(10px)}
+.no-intro #intro{display:none}
+#intro{animation:introSafety .4s 4.5s forwards}
+@keyframes introSafety{to{opacity:0;visibility:hidden}}
+.gallery img{transition:none!important}
+
+.plate{transition:box-shadow 1.2s var(--ease)}
+.plate.lit{box-shadow:0 0 0 10px #2C1E15,0 0 0 11px rgba(217,138,74,.25),0 50px 90px -30px rgba(0,0,0,.55),0 0 160px rgba(217,138,74,.28)}
+.mitem{transition:background-color .35s var(--ease),padding .35s var(--ease)}
+.mitem:hover{background:linear-gradient(90deg,rgba(217,138,74,.06),transparent 70%)}
+
+.js-anim [data-reveal]{opacity:0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<script>
+  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches || sessionStorage.getItem('casarettoIntro')) document.documentElement.classList.add('no-intro'); } catch (e) { document.documentElement.classList.add('no-intro'); }
+</script>
+<div id="bg-flag" aria-hidden="true">
+  <svg viewBox="0 0 1200 420" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- ondulação do tecido -->
+      <filter id="tecido" x="-15%" y="-30%" width="130%" height="160%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.0085 0.02" numOctaves="2" seed="9" result="ruido"/>
+        <feDisplacementMap in="SourceGraphic" in2="ruido" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <!-- trama fina do tecido -->
+      <filter id="trama" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9 0.35" numOctaves="1" seed="3"/>
+        <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/>
+      </filter>
+      <!-- dobras: luz e sombra alternadas ao longo da faixa -->
+      <linearGradient id="dobras" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#000" stop-opacity=".38"/>
+        <stop offset="6%"   stop-color="#fff" stop-opacity=".30"/>
+        <stop offset="13%"  stop-color="#000" stop-opacity=".30"/>
+        <stop offset="21%"  stop-color="#fff" stop-opacity=".26"/>
+        <stop offset="29%"  stop-color="#000" stop-opacity=".32"/>
+        <stop offset="37%"  stop-color="#fff" stop-opacity=".34"/>
+        <stop offset="45%"  stop-color="#000" stop-opacity=".26"/>
+        <stop offset="53%"  stop-color="#fff" stop-opacity=".28"/>
+        <stop offset="61%"  stop-color="#000" stop-opacity=".34"/>
+        <stop offset="69%"  stop-color="#fff" stop-opacity=".30"/>
+        <stop offset="77%"  stop-color="#000" stop-opacity=".28"/>
+        <stop offset="85%"  stop-color="#fff" stop-opacity=".26"/>
+        <stop offset="93%"  stop-color="#000" stop-opacity=".30"/>
+        <stop offset="100%" stop-color="#000" stop-opacity=".40"/>
+      </linearGradient>
+      <!-- brilho de cetim em diagonal -->
+      <linearGradient id="brilho" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>
+        <stop offset="40%"  stop-color="#fff" stop-opacity="0"/>
+        <stop offset="47%"  stop-color="#fff" stop-opacity=".32"/>
+        <stop offset="52%"  stop-color="#fff" stop-opacity="0"/>
+        <stop offset="70%"  stop-color="#fff" stop-opacity="0"/>
+        <stop offset="75%"  stop-color="#fff" stop-opacity=".18"/>
+        <stop offset="80%"  stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <!-- volume nas bordas -->
+      <linearGradient id="volume" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#000" stop-opacity=".42"/>
+        <stop offset="16%"  stop-color="#000" stop-opacity="0"/>
+        <stop offset="50%"  stop-color="#fff" stop-opacity=".08"/>
+        <stop offset="84%"  stop-color="#000" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#000" stop-opacity=".42"/>
+      </linearGradient>
+    </defs>
+    <g filter="url(#tecido)">
+      <rect x="-70" y="-40" width="1340" height="180" fill="#00A651"/>
+      <rect x="-70" y="140" width="1340" height="140" fill="#F7F7F2"/>
+      <rect x="-70" y="280" width="1340" height="180" fill="#E0202E"/>
+      <rect x="-70" y="-40" width="1340" height="500" fill="url(#dobras)"/>
+      <rect x="-70" y="-40" width="1340" height="500" fill="url(#brilho)"/>
+      <rect x="-70" y="-40" width="1340" height="500" fill="url(#volume)"/>
+      <rect x="-70" y="-40" width="1340" height="500" filter="url(#trama)"/>
+    </g>
+  </svg>
+</div>
+<div id="bg-tex" aria-hidden="true"></div>
+<div id="intro" aria-hidden="true">
+  <span class="glow"></span>
+  <div class="logo"><span>Casaretto</span><span>Pasta &amp; Vinho</span></div>
+</div>
+<a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-laranja focus:text-ink focus:px-4 focus:py-2 focus:rounded">Pular para o conteúdo</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="wrap flex items-center justify-between gap-6">
+    <a href="#inicio" class="logo" aria-label="Casaretto Pasta e Vinho, início"><span>Casaretto</span><span>Pasta &amp; Vinho</span></a>
+    <nav class="nav hidden lg:flex items-center gap-10" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#especiais">Especiais</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#ambiente">Ambiente</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="flex items-center gap-1">
+      <button class="icon-btn" id="searchShortcut" type="button" aria-label="Buscar no cardápio"><i data-lucide="search"></i></button>
+      <a class="icon-btn" data-link="pedido" target="_blank" rel="noopener" aria-label="Fazer pedido"><i data-lucide="shopping-bag"></i></a>
+      <a class="icon-btn" data-link="tel" aria-label="Ligar para o restaurante"><i data-lucide="phone"></i></a>
+      <button class="icon-btn lg:hidden" id="openMenu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="icon-btn" id="closeMenu" type="button" aria-label="Fechar menu" style="position:absolute;top:22px;right:20px"><i data-lucide="x"></i></button>
+  <a class="l" href="#inicio">Início</a>
+  <a class="l" href="#cardapio">Cardápio</a>
+  <a class="l" href="#especiais">Especiais</a>
+  <a class="l" href="#sobre">Sobre nós</a>
+  <a class="l" href="#ambiente">Ambiente</a>
+  <a class="l" href="#avaliacoes">Avaliações</a>
+  <a class="l" href="#contato">Contato</a>
+  <div class="mt-auto grid gap-3 pt-8">
+    <a class="btn btn-primary justify-center" data-link="pedido" target="_blank" rel="noopener">Fazer pedido <i data-lucide="arrow-right"></i></a>
+    <a class="btn btn-outline justify-center" data-link="whatsappReserva" target="_blank" rel="noopener">Reservar mesa <i data-lucide="calendar-days"></i></a>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1920&q=80"
+         data-fallback="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
+         alt="" width="1920" height="1080" fetchpriority="high">
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow tri-eyebrow" data-hero><span class="tricolore" aria-hidden="true"><i></i><i></i><i></i></span>Benvenuti · Cucina italiana em Piracicaba</p>
+      <h1 class="display"><span class="ln" style="display:inline-block">O sabor da Itália</span><br><span class="ln or" style="display:inline-block">em cada detalhe</span></h1>
+      <p class="sub" data-hero>No Casaretto Pasta &amp; Vinho, a gastronomia italiana encontra um ambiente acolhedor para transformar refeições em momentos especiais.</p>
+      <div class="flex flex-wrap gap-3" data-hero>
+        <a class="btn btn-primary" data-link="pedido" target="_blank" rel="noopener">Fazer pedido <i data-lucide="arrow-right"></i></a>
+        <a class="btn btn-outline" data-link="whatsappReserva" target="_blank" rel="noopener">Reservar mesa <i data-lucide="calendar-days"></i></a>
+      </div>
+      <div class="feats" data-hero>
+        <div class="feat"><i data-lucide="wheat"></i><div><b>Massas<br>caseiras</b><span>Produção própria</span></div></div>
+        <div class="feat"><i data-lucide="award"></i><div><b>Desde<br>1990</b><span>Tradição em Piracicaba</span></div></div>
+        <div class="feat"><i data-lucide="wine"></i><div><b>Carta de<br>vinhos</b><span>Seleção da casa</span></div></div>
+      </div>
+    </div>
+
+    <div class="plate-wrap" data-plate>
+      <span class="plate-ring" aria-hidden="true"></span>
+      <figure class="plate ph m-0" data-label="Casaretto">
+        <img id="heroImg" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1400&h=1400&q=85"
+             data-fallback="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1400&h=1400&q=85"
+             alt="Fettuccine ao molho com tomate, cogumelos e tiras de carne" width="1200" height="1200" fetchpriority="high">
+      </figure>
+      <div class="badge" aria-hidden="true"><div><small>DAL 1990</small><strong>CASARETTO</strong><small>PASTA &amp; VINHO</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESPECIAIS ===================== -->
+<section class="sec" id="especiais" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="center mb-12 sec-head">
+      <p class="eyebrow" data-reveal>Pratos da casa</p>
+      <h2 class="display h2" data-reveal>Seleção <span class="or">Casaretto</span></h2>
+      <svg class="ornament" viewBox="0 0 52 14" fill="currentColor" aria-hidden="true"><circle cx="8" cy="7" r="1.6"/><path d="M26 1c3 3 3 9 0 12-3-3-3-9 0-12Z"/><circle cx="44" cy="7" r="1.6"/></svg>
+      <p class="muted mx-auto mt-4" style="max-width:46ch;font-size:.9rem" data-reveal>Alguns pratos do cardápio da casa, entre massas, carnes, risotos e sobremesas.</p>
+    </div>
+
+    <div class="dishes">
+      <article class="dish" data-reveal>
+        <figure class="ph m-0" data-label="Massas"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=700&h=700&q=80" data-fallback="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&h=700&q=80" alt="Espaguete ao molho de tomate com manjericão" loading="lazy" width="700" height="700"></figure>
+        <h3>Spaghetti ao Basílico</h3>
+        <p>Massa com polpa de tomate e manjericão, um dos 22 molhos da casa.</p>
+        <div class="dish-foot"><span>R$ 76</span><a class="bag" data-link="pedido" target="_blank" rel="noopener" aria-label="Pedir Spaghetti ao Basílico"><i data-lucide="shopping-bag"></i></a></div>
+      </article>
+      <article class="dish" data-reveal>
+        <figure class="ph m-0" data-label="Filet Mignon"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=700&h=700&q=80" alt="Filé grelhado fatiado servido no prato" loading="lazy" width="700" height="700"></figure>
+        <h3>Filet ao Molho Funghi</h3>
+        <p>Filet mignon com risoto do próprio molho e batata sautè.</p>
+        <div class="dish-foot"><span>R$ 118</span><a class="bag" data-link="pedido" target="_blank" rel="noopener" aria-label="Pedir Filet ao Molho Funghi"><i data-lucide="shopping-bag"></i></a></div>
+      </article>
+      <article class="dish" data-reveal>
+        <figure class="ph m-0" data-label="Risotos"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=700&h=700&q=80" alt="Risoto cremoso servido em prato raso" loading="lazy" width="700" height="700"></figure>
+        <h3>Risoto de Funghi</h3>
+        <p>Risoto de funghi com tiras de filet mignon.</p>
+        <div class="dish-foot"><span>R$ 98</span><a class="bag" data-link="pedido" target="_blank" rel="noopener" aria-label="Pedir Risoto de Funghi"><i data-lucide="shopping-bag"></i></a></div>
+      </article>
+      <article class="dish" data-reveal>
+        <figure class="ph m-0" data-label="Sobremesas"><img src="https://images.unsplash.com/photo-1586040140378-b5634cb4c8fc?auto=format&fit=crop&w=700&h=700&q=80" data-fallback="https://images.unsplash.com/photo-1631206753348-db44968fd440?auto=format&fit=crop&w=700&h=700&q=80" alt="Tiramissu em copo com camadas de creme e cacau" loading="lazy" width="700" height="700"></figure>
+        <h3>Tiramissu</h3>
+        <p>Biscoito champanhe, mascarpone, café, cacau e nutella.</p>
+        <div class="dish-foot"><span>R$ 36</span><a class="bag" data-link="pedido" target="_blank" rel="noopener" aria-label="Pedir Tiramissu"><i data-lucide="shopping-bag"></i></a></div>
+      </article>
+    </div>
+
+    <div class="center mt-8" data-reveal>
+      <a class="btn btn-outline" href="#cardapio">Ver cardápio completo <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARDÁPIO COMPLETO ===================== -->
+<section class="sec" id="cardapio" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-10 sec-head sec-head-wide">
+      <div>
+        <p class="eyebrow" data-reveal>Cardápio</p>
+        <h2 class="display h2" data-reveal>Nosso <span class="or">Cardápio</span></h2>
+        <p class="muted mt-3" style="max-width:52ch;font-size:.9rem" data-reveal>Explore sabores da gastronomia italiana e descubra opções para diferentes momentos. Pratos e descrições do cardápio oficial.</p>
+      </div>
+      <div class="flex flex-wrap gap-3" data-reveal>
+        <a class="btn btn-primary" data-link="cardapioPdf" target="_blank" rel="noopener"><i data-lucide="file-text"></i> Cardápio oficial</a>
+        <a class="btn btn-outline" data-link="pizzasPdf" target="_blank" rel="noopener"><i data-lucide="pizza"></i> Pizzas</a>
+      </div>
+    </div>
+
+    <div class="menu-shell">
+      <div class="menu-bar" role="search">
+        <div class="chips" id="chips" role="toolbar" aria-label="Filtrar por categoria"></div>
+        <label class="search" id="searchWrap">
+          <span class="sr-only">Buscar prato</span>
+          <i data-lucide="search" class="s-i"></i>
+          <input type="search" id="menuSearch" placeholder="Buscar prato ou ingrediente" autocomplete="off">
+          <button type="button" class="s-x" id="clearSearch" aria-label="Limpar busca"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </label>
+      </div>
+      <p class="sr-only" id="menuStatus" aria-live="polite"></p>
+      <div id="menuRoot"></div>
+      <div class="empty" id="menuEmpty">
+        <p class="eyebrow">Nada encontrado</p>
+        <h3 class="display" style="font-size:1.5rem">Não encontramos esse prato.</h3>
+        <p class="muted mt-2">Tente outro nome ou ingrediente, ou veja o cardápio completo da casa.</p>
+        <div class="flex flex-wrap justify-center gap-3 mt-6">
+          <button class="btn btn-primary" id="resetMenu" type="button">Ver todo o cardápio</button>
+          <a class="btn btn-outline" data-link="cardapioPdf" target="_blank" rel="noopener">Cardápio oficial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE NÓS ===================== -->
+<section class="sec sec-alt" id="sobre">
+  <div class="wrap story">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal>Nossa história</p>
+      <h2 class="display h2" data-reveal>Paixão em <span class="or">cada prato</span></h2>
+      <p class="muted mt-6" style="max-width:46ch;line-height:1.8" data-reveal>Fundado em 1990, o Casaretto Pasta &amp; Vinho trabalha com massas próprias e caseiras. O cardápio reúne pastas com molhos especiais, carnes, aves, peixes e risotos, servidos em um salão intimista com clima de cantina italiana e acompanhados pela carta de vinhos da casa.</p>
+      <p class="script mt-6" data-reveal>Casaretto</p>
+      <div class="stats" data-reveal>
+        <div class="stat"><strong>1990</strong><span>Ano de fundação</span></div>
+        <div class="stat"><strong data-count="22">22</strong><span>Molhos da casa</span></div>
+        <div class="stat"><strong data-count="1436">1.436</strong><span>Avaliações no Google</span></div>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-9" data-reveal>
+        <a class="btn btn-outline" href="#ambiente">Conhecer o ambiente <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="gallery">
+        <figure class="ph big m-0" data-reveal data-label="Massas"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1200&q=80" data-fallback="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=80" alt="Massa italiana ao molho de tomate com manjericão" loading="lazy"></figure>
+        <figure class="ph m-0" data-reveal data-label="Risotos"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80" alt="Risoto cremoso servido em prato raso" loading="lazy"></figure>
+        <figure class="ph m-0" data-reveal data-label="Sobremesas"><img src="https://images.unsplash.com/photo-1586040140378-b5634cb4c8fc?auto=format&fit=crop&w=600&q=80" data-fallback="https://images.unsplash.com/photo-1631206753348-db44968fd440?auto=format&fit=crop&w=600&q=80" alt="Tiramissu em camadas polvilhado com cacau" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AMBIENTE ===================== -->
+<section class="sec" id="ambiente" style="padding-top:calc(var(--sec) * .7)">
+  <div class="wrap">
+    <div class="center mb-12 sec-head">
+      <p class="eyebrow" data-reveal>O nosso espaço</p>
+      <h2 class="display h2" data-reveal>Clima de <span class="or">cantina italiana</span></h2>
+      <svg class="ornament" viewBox="0 0 52 14" fill="currentColor" aria-hidden="true"><circle cx="8" cy="7" r="1.6"/><path d="M26 1c3 3 3 9 0 12-3-3-3-9 0-12Z"/><circle cx="44" cy="7" r="1.6"/></svg>
+      <p class="muted mx-auto mt-4" style="max-width:48ch;font-size:.9rem" data-reveal>Salão intimista, mesas postas e carta de vinhos à vista: um ambiente pensado para almoços de família, jantares a dois e confraternizações.</p>
+    </div>
+
+    <div class="amb">
+      <figure class="ph a1 m-0" data-reveal data-label="Salão">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1300&q=80" data-fallback="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1300&q=80" alt="Salão do restaurante com mesas postas e iluminação quente" loading="lazy">
+        <figcaption>Salão principal</figcaption>
+      </figure>
+      <figure class="ph a2 m-0" data-reveal data-label="Mesas">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Mesa posta com taças e velas" loading="lazy">
+        <figcaption>Mesas postas</figcaption>
+      </figure>
+      <figure class="ph a3 m-0" data-reveal data-label="Vinhos">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=80" data-fallback="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=700&q=80" alt="Vinho tinto sendo servido em taça" loading="lazy">
+        <figcaption>Carta de vinhos</figcaption>
+      </figure>
+      <figure class="ph a4 m-0" data-reveal data-label="Ambiente">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=80" data-fallback="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1100&q=80" alt="Ambiente de restaurante italiano com mesas e decoração aconchegante" loading="lazy">
+        <figcaption>Para receber bem</figcaption>
+      </figure>
+      <figure class="ph a5 m-0" data-reveal data-label="Trattoria">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" data-fallback="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=700&q=80" alt="Salão de restaurante com luz baixa e clima intimista" loading="lazy">
+        <figcaption>Clima de trattoria</figcaption>
+      </figure>
+      <figure class="ph a6 m-0" data-reveal data-label="A dois">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=1100&q=80" data-fallback="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=80" alt="Mesa para dois com taças e luz suave" loading="lazy">
+        <figcaption>Jantar a dois</figcaption>
+      </figure>
+      <figure class="ph a7 m-0" data-reveal data-label="Massa">
+        <img src="https://images.unsplash.com/photo-1622973536968-3ead9e780960?auto=format&fit=crop&w=700&q=80" data-fallback="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=80" alt="Espaguete ao sugo com manjericão em prato branco" loading="lazy">
+        <figcaption>Massa feita na casa</figcaption>
+      </figure>
+      <figure class="ph a8 m-0" data-reveal data-label="Encontros">
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1100&q=80" data-fallback="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=80" alt="Grupo de amigos brindando à mesa de um restaurante" loading="lazy">
+        <figcaption>Confraternizações</figcaption>
+      </figure>
+    </div>
+
+    <div class="center mt-8" data-reveal>
+      <a class="btn btn-outline" data-link="eventosPdf" target="_blank" rel="noopener">Espaço para eventos <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVALIAÇÕES ===================== -->
+<section class="sec" id="avaliacoes">
+  <div class="wrap">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 sec-head sec-head-wide">
+      <div>
+        <p class="eyebrow" data-reveal>O que dizem nossos clientes</p>
+        <h2 class="display h2" data-reveal>Experiências <span class="or">à mesa</span></h2>
+      </div>
+      <div class="text-right" data-reveal>
+        <div class="flex items-center gap-3 justify-end">
+          <div class="avatars" aria-hidden="true">
+            <span style="background:#D98A4A">CJ</span><span style="background:#C9A27E">LP</span><span style="background:#D9B99B">LR</span>
+          </div>
+          <strong class="display" style="font-size:1.5rem">1.436</strong>
+        </div>
+        <p class="muted text-sm mt-1">avaliações no Google</p>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <figure class="review m-0" data-reveal>
+        <div class="review-top"><span class="av" style="background:#D98A4A">CJ</span><span class="q" aria-hidden="true">&rdquo;</span></div>
+        <blockquote>"Comida deliciosa, ótimo atendimento e ambiente tipo cantina italiana, muito bom!"</blockquote>
+        <figcaption><b>Carlos Jacon</b><span>Avaliação no Google</span></figcaption>
+      </figure>
+      <figure class="review mid m-0" data-reveal>
+        <div class="review-top"><span class="av" style="background:#C9A27E">LP</span><span class="q" aria-hidden="true">&rdquo;</span></div>
+        <blockquote>"Preços de restaurantes de alta gastronomia, porém entrega algo básico."</blockquote>
+        <figcaption><b>Lucio De paula</b><span>Avaliação no Google</span></figcaption>
+      </figure>
+      <figure class="review m-0" data-reveal>
+        <div class="review-top"><span class="av" style="background:#D9B99B">LR</span><span class="q" aria-hidden="true">&rdquo;</span></div>
+        <blockquote>"Boa opção de restaurante em Piracicaba, sem ser na beira do rio."</blockquote>
+        <figcaption><b>Lúcia Rizzo</b><span>Avaliação no Google</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="center mt-10" data-reveal>
+      <a class="btn btn-outline" data-link="googleAvaliacoes" target="_blank" rel="noopener">Ver avaliações no Google <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCALIZAÇÃO E CONTATO ===================== -->
+<section class="sec sec-alt" id="contato">
+  <div class="wrap">
+    <div class="mb-10 sec-head">
+      <p class="eyebrow" data-reveal>Localização</p>
+      <h2 class="display h2" data-reveal>Esperamos você <span class="or">em Piracicaba</span></h2>
+    </div>
+    <div class="loc">
+      <div class="loc-card" data-reveal>
+        <h3 class="display" style="font-size:1.3rem">Casaretto Pasta &amp; Vinho</h3>
+        <ul class="info">
+          <li><i data-lucide="map-pin"></i><div><b>Endereço</b>Rua Aquilino Pacheco, 412<br>Alto, Piracicaba, SP<small>CEP 13419-150</small></div></li>
+          <li><i data-lucide="phone"></i><div><b>Telefone e WhatsApp</b><a data-link="tel">(19) 3433-6785</a></div></li>
+          <li><i data-lucide="clock"></i><div><b>Horário</b>Terça a sábado, 19h às 22h30<br>Domingo, 11h às 15h30<small>Horário divulgado em guia gastronômico. Confirme por telefone antes da visita.</small></div></li>
+          <li><i data-lucide="bike"></i><div><b>Retirada e delivery</b><a data-link="pedido" target="_blank" rel="noopener">Fazer pedido online</a></div></li>
+        </ul>
+        <div class="flex flex-wrap gap-3">
+          <a class="btn btn-primary" data-link="comoChegar" target="_blank" rel="noopener"><i data-lucide="navigation"></i> Como chegar</a>
+          <a class="btn btn-outline" data-link="whatsappReserva" target="_blank" rel="noopener">Reservar mesa <i data-lucide="calendar-days"></i></a>
+        </div>
+      </div>
+      <div class="map" data-reveal>
+        <iframe title="Mapa com a localização do Casaretto Pasta e Vinho em Piracicaba"
+          src="https://maps.google.com/maps?q=Casaretto%20Pasta%20e%20Vinho%2C%20Rua%20Aquilino%20Pacheco%20412%2C%20Alto%2C%20Piracicaba%20SP&z=16&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_.8fr_1.2fr_1.2fr]">
+    <div>
+      <a href="#inicio" class="logo"><span>Casaretto</span><span>Pasta &amp; Vinho</span></a>
+      <p class="muted mt-5" style="font-size:.84rem;max-width:32ch">Gastronomia italiana em Piracicaba. Massas próprias e caseiras desde 1990.</p>
+      <div class="social">
+        <a data-link="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a data-link="facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.5-1 .9-1h2.4V2.1L14 2c-3.6 0-4.4 2.7-4.4 4.4v2.1H7.5v3.8h2.1V22H14v-9.7h3l.4-3.8Z"/></svg></a>
+        <a data-link="whatsappGeral" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links rápidos</h4>
+      <ul style="font-size:.86rem">
+        <li><a href="#inicio">Início</a></li><li><a href="#cardapio">Cardápio</a></li><li><a href="#especiais">Especiais</a></li>
+        <li><a href="#sobre">Sobre nós</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul class="f-contact">
+        <li><i data-lucide="map-pin"></i><span>Rua Aquilino Pacheco, 412<br>Alto, Piracicaba, SP</span></li>
+        <li><i data-lucide="phone"></i><a data-link="tel">(19) 3433-6785</a></li>
+        <li><i data-lucide="instagram"></i><a data-link="instagram" target="_blank" rel="noopener">@casarettopastaevinho</a></li>
+        <li><i data-lucide="clock"></i><span>Ter a sáb, 19h às 22h30<br>Dom, 11h às 15h30</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reservas</h4>
+      <p class="muted" style="font-size:.84rem">Consulte a disponibilidade de mesas diretamente com o restaurante.</p>
+      <div class="reserve-box"><span>Reserva pelo WhatsApp</span><a data-link="whatsappReserva" target="_blank" rel="noopener">Reservar</a></div>
+      <p class="mt-4" style="font-size:.8rem"><a data-link="linktree" target="_blank" rel="noopener">Todos os links oficiais</a></p>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>© <span id="year"></span> Casaretto Pasta &amp; Vinho. Todos os direitos reservados.</span>
+    <span><a data-link="cardapioPdf" target="_blank" rel="noopener">Cardápio oficial</a> &nbsp;|&nbsp; <a data-link="vinhosPdf" target="_blank" rel="noopener">Carta de vinhos</a></span>
+  </div>
+</footer>
+
+<!-- ===================== ATALHOS WHATSAPP E INSTAGRAM ===================== -->
+<nav class="quick" id="quick" aria-label="Atalhos de contato">
+  <a data-link="whatsappGeral" target="_blank" rel="noopener" aria-label="Falar com o Casaretto pelo WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a data-link="instagram" target="_blank" rel="noopener" aria-label="Abrir o Instagram do Casaretto" title="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.441.0/dist/umd/lucide.min.js"></script>
+
+<script>
+/* ===================== DADOS DO RESTAURANTE ===================== */
+const RESTAURANTE = {
+  whatsappNumero: '551934336785', // confirmado no Linktree oficial
+  links: {
+    tel: 'tel:+551934336785',
+    instagram: 'https://www.instagram.com/casarettopastaevinho/',
+    facebook: 'https://fb.com/grupocasaretto',
+    linktree: 'https://linktr.ee/casarettopastavinho',
+    pedido: 'https://now.swfast.com.br/casaretto-pasta-e-vinho',
+    cardapioPdf: 'https://www.dropbox.com/scl/fi/f5iin9s1udits65kik3ko/Cardapio.pdf?rlkey=r04g8la516cpxavjipohbm96c&st=m3u0z41t&dl=0',
+    pizzasPdf: 'https://www.dropbox.com/scl/fi/ktgiskqxlnyz3cx3wx0op/PIZZAS.pdf?rlkey=6fhiovq8dcqxtmxto5n1ziis7&st=13fxi254&dl=0',
+    vinhosPdf: 'https://www.dropbox.com/scl/fi/6tj2s88v0x5n4st335cjh/CARTA-DE-VINHO.pdf?rlkey=e8es87e72rwuh86kuagmxe5cq&st=ll9z6ist&dl=0',
+    eventosPdf: 'https://www.dropbox.com/scl/fi/o2tt2gbsmnb95l9bk8hcc/Eventos.pdf?rlkey=pntszlvfrk81fwo21mkdjp1hs&st=9li81sp1&dl=0',
+    comoChegar: 'https://www.google.com/maps/search/?api=1&query=Casaretto+Pasta+e+Vinho+Rua+Aquilino+Pacheco+412+Piracicaba',
+    googleAvaliacoes: 'https://www.google.com/maps/search/?api=1&query=Casaretto+Pasta+e+Vinho+Piracicaba'
+  }
+};
+const wa = m => `https://wa.me/${RESTAURANTE.whatsappNumero}?text=${encodeURIComponent(m)}`;
+RESTAURANTE.links.whatsappGeral = wa('Olá! Gostaria de saber mais sobre o cardápio e as reservas do Casaretto Pasta & Vinho.');
+RESTAURANTE.links.whatsappReserva = wa('Olá! Gostaria de consultar a disponibilidade de mesa no Casaretto Pasta & Vinho.');
+document.querySelectorAll('[data-link]').forEach(el => { const u = RESTAURANTE.links[el.dataset.link]; if (u) el.href = u; });
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ===================== CARDÁPIO (site oficial) ===================== */
+const CATEGORIAS = [
+  { id: 'todos', nome: 'Todos' },
+  { id: 'entradas', nome: 'Entradas', titulo: 'Entradas e saladas' },
+  { id: 'massas', nome: 'Massas', titulo: 'Massas' },
+  { id: 'risotos', nome: 'Risotos', titulo: 'Risotos' },
+  { id: 'carnes', nome: 'Carnes e Acompanhamentos', titulo: 'Carnes, aves e peixes' },
+  { id: 'sobremesas', nome: 'Sobremesas', titulo: 'Sobremesas' },
+  { id: 'vinhos', nome: 'Vinhos', titulo: 'Vinhos' },
+  { id: 'bebidas', nome: 'Bebidas', titulo: 'Bebidas e bar' }
+];
+const CARDAPIO = {
+  entradas: [
+    { grupo: 'Entradas', items: [
+      ['Couvert', 'Seleção de pães, torradas, patês e azeitonas.', 'Por pessoa'],
+      ['Berinjela Recheada', 'Molho de tomate condimentado, aliche, alcaparras e azeitonas pretas.'],
+      ['Mussarela de Búfala', 'Acompanha molho de mostarda.'],
+      ['Porpetas Recheadas', 'Empanadas e recheadas com gorgonzola e mussarela.'],
+      ['Bolinho de Bacalhau', 'Porção com 6 unidades.'],
+      ['Sardela', 'Antepasto clássico de cantina, para acompanhar os pães.'],
+      ['Alichela', 'Antepasto clássico de cantina, à base de aliche.'],
+      ['Carpaccio à Bruzzi', 'Carpaccio com molho de mostarda, mix de folhas, parmesão e mussarela de búfala.']
+    ]},
+    { grupo: 'Saladas', items: [
+      ['Salada Caprese Montada', 'Tomate em cubinhos sobre mussarela de búfala e molho pesto.'],
+      ['Salada do Nonno', 'Mix de folhas verdes, crocante de presunto parma, tomate cereja e mussarela de búfala.'],
+      ['Salada Caprese com Palmito', 'Tomate, mussarela de búfala em fatias, molho pesto e palmito.'],
+      ['Salada Verde com Palmito', 'Folhas verdes, tomate, parmesão e palmito com aceto balsâmico e mel.']
+    ]}
+  ],
+  massas: [
+    { grupo: 'Massas da casa', items: [
+      ['Nhoque à Moda', 'Polpa de tomate, tiras de mignon, champignon e azeitonas pretas.'],
+      ['Espaguetti com Tiras de Mignon e Brócolis', 'Espaguete com tiras de filet mignon e brócolis.'],
+      ['Talharim ao Mare', 'Talharim com frutos do mar.'],
+      ['Capeletti ao Pesto', 'Capeletti com manjericão e nozes.'],
+      ['Conchiglione Casaretto', 'Receita que leva o nome da casa.', 'Da casa'],
+      ['Capeletti Parisiense', 'Molho branco, frango, presunto e ervilha.']
+    ]},
+    { grupo: 'Especial Casaretto', items: [
+      ['Strudelli', 'Recheado com catupiry e presunto, gratinado ao molho bechamel e nozes.', 'Especial'],
+      ['Capelini Verdi', 'Recheado com ricota, nozes e passas, gratinado ao molho branco.', 'Especial']
+    ]},
+    { grupo: 'Monte sua massa', hint: 'Escolha penne, fettuccini, fuzilli, macheroni, spaghetti, conchiglie ou tagliarini e combine com um dos molhos.', items: [
+      ['Ao Sugo', 'Molho de tomate.'], ['Basílico', 'Polpa de tomate e manjericão.'],
+      ['Basílico com Camarão', 'Polpa de tomate e camarão.'], ['Ao Sugo com Porpetas', 'Molho de tomate e polpetti.'],
+      ['À Bolonhesa', 'Molho de tomate e ragu de carne.'], ['Ao Pesto', 'Manjericão e nozes.'],
+      ['Alfredo de Roma', 'Creme de leite, manteiga e parmesão.'],
+      ['Mediterrâneo', 'Legumes grelhados no azeite extra virgem, ricota fresca e molho de tomate.', 'Light'],
+      ['Napolitana', 'Polpa de tomate e calabresa.'], ['Aos Quatro Queijos', 'Catupiry, gorgonzola, mussarela e parmesão.'],
+      ['Carbonara', 'Bacon e gema de ovos.'], ['Romanesca', 'Molho branco, presunto, ervilha e champignons.'],
+      ['Parisiense', 'Molho branco, frango, presunto e ervilha.'], ['Puttanesca', 'Ao sugo com alcaparras, aliche, atum e azeitonas pretas.'],
+      ['À Georgia', 'Camarões flambados e gratinados ao molho branco.'], ['Casaretto', 'Creme de espinafre e gorgonzola.', 'Da casa'],
+      ['Brócolis e Tiras de Filet Mignon', ''], ['Escalope de Filé ao Molho Funghi', ''],
+      ['À Moda', 'Polpa de tomate, tiras de mignon, champignon e azeitonas pretas.'],
+      ['Pizzaiola', 'Molho de tomate condimentado com escalope de mignon.'],
+      ['Medalhões ao Creme de Queijo Brie', 'Massa na manteiga com alho poró, creme de brie com rúcula e cenoura ralada.'],
+      ['À Marinara', 'Polpa de tomate com frutos do mar.']
+    ]}
+  ],
+  risotos: [
+    { grupo: 'Risotos', items: [
+      ['Risoto de Camarão', 'Porção pequena.', 'Pequeno'], ['Risoto de Camarão', 'Porção média.', 'Médio'],
+      ['Risoto de Abobrinha', 'Com chips de presunto parma.'], ['Risoto de Frango', ''], ['Risoto de Cordeiro', ''],
+      ['Risoto de Funghi', 'Com tiras de filet mignon.'], ['Risoto de Frutos do Mar', '']
+    ]}
+  ],
+  carnes: [
+    { grupo: 'Filet Mignon', items: [
+      ['Filet à Parmeggiana', 'Acompanha arroz e fritas.'], ['Filet à Milaneza', 'Arroz à grega e purê de batata.'],
+      ['Filet ao Molho Funghi', 'Risoto do próprio molho e batata sautè.'], ['Steak au Vert', 'Risoto poivre e purê de batatas.'],
+      ['Filet com Legumes', 'Legumes na manteiga com arroz à grega.'], ['Filet aos Quatro Queijos', 'Arroz branco com batata palha.'],
+      ['Chateaubriand', 'Arroz à grega e batatas cozidas no próprio molho.'], ['Medalhão Imperial', 'Arroz à grega e batatas cozidas no próprio molho.'],
+      ['Strogonoff de Filet', 'Arroz branco e batata palha.'], ['Filet à Piamonteza', 'Risoto de mostarda, champignons e batatas fritas.'],
+      ['Chefer Recheado com Catupiry', 'Arroz à grega e batata palha.']
+    ]},
+    { grupo: 'Carnes', items: [
+      ['Porpetas Recheadas com Gorgonzola', 'Ao molho bolonhesa em cama de polenta cremosa.'],
+      ['Polpetone à Parmegiana', 'Recheado com presunto e queijo, com arroz branco e fritas.'],
+      ['Ossobuco ao Próprio Molho', 'Servido no molho do assado com fettuccine.'],
+      ['Pernil de Cordeiro', 'Com brócolis ao alho e óleo, batatas coradas e arroz à grega.', 'Para 2']
+    ]},
+    { grupo: 'Peixes', items: [
+      ['Peixe com Legumes', 'Legumes na manteiga com arroz branco.'], ['Peixe à Fiorentina', 'Molho de espinafre e risoto de açafrão.'],
+      ['Peixe com Molho de Camarão', 'Camarão, molho de tomate, batata sautè e arroz branco.'],
+      ['Peixe à Belle Meunière', 'Camarões, alcaparras e champignons na manteiga, com batatas sautè.'],
+      ['Peixe ao Roquefort', 'Molho cremoso de roquefort com camarão e batatas.'],
+      ['Moqueca', 'Abadejo com camarão, pimentões, leite de coco, dendê e risoto do próprio molho.'],
+      ['Bacalhau Grelhado', 'Batatas coradas, arroz com brócolis e brócolis ao alho e óleo.'],
+      ['Bacalhau ao Forno', 'Pimentões, tomate, cebola, batata, azeitona preta, leite de coco e dendê.']
+    ]},
+    { grupo: 'Frango', items: [
+      ['Supremo ao Creme de Milho', 'Arroz branco e batata palha.'], ['Supremo Grelhado com Legumes', 'Legumes na manteiga com arroz branco.'],
+      ['Supremo ao Curry', 'Com risoto do próprio molho.'], ['Strogonoff de Frango', 'Arroz branco e batata palha.'],
+      ['Supremo à Francesa', 'Arroz branco, palmito, ervilha, presunto e batata palha.']
+    ]},
+    { grupo: 'Camarão', items: [
+      ['Camarão à Grega', 'Camarões grandes à milanesa com provolone, arroz à grega e batata palha.'],
+      ['Camarão Flambado ao Catupiry', 'Flambado ao conhaque, catupiry, arroz branco e batata palha.'],
+      ['Camarão à Termidor', 'Ao molho mostarda com risoto do próprio molho e batata palha.'],
+      ['Camarão à Bristol', 'Camarões grandes empanados com catupiry, arroz à grega e batata palha.'],
+      ['Camarão à Baiana', 'Dendê, leite de coco e risoto do próprio molho.']
+    ]}
+  ],
+  sobremesas: [
+    { grupo: 'Sobremesas', items: [
+      ['Tiramissu', 'Biscoito champanhe, mascarpone, café, cacau e nutella.'],
+      ['Petit Gateau', 'Bolo cremoso de chocolate com sorvete de creme.'],
+      ['Banana Flambada', 'Flambada no conhaque com canela e sorvete de creme.'],
+      ['Bavaroise de Maracujá', 'Maracujá batido com sorvete de creme, leite condensado e raspas de limão.'],
+      ['Creme de Papaya', 'Papaya batido com sorvete de creme e licor de cassis.'],
+      ['Sorvetes Häagen-Dazs', 'Macadamia, Chocolate Belgian, Dulce de Leche e Strawberry.'],
+      ['Frutas da Época', 'Frutas frescas.']
+    ]}
+  ],
+  bebidas: [
+    { grupo: 'Sem álcool', items: [
+      ['Água S.Pellegrino 500 ml', 'Italiana, com gás natural.'], ['Água Prata', 'Com ou sem gás.'],
+      ['Soda Italiana', ''], ['Suco de Frutas', ''], ['Suco de Tomate', ''], ['Refrigerante', '']
+    ]},
+    { grupo: 'Drinks e coquetéis', items: [
+      ['Aperol Spritz', ''], ['Negroni', ''], ['Campari Milano', ''], ['Campari Tonic', ''], ['Campari Citrus', ''],
+      ['Kir Royal', ''], ['Margarita', ''], ['Bloody Mary', ''], ['Pina Colada', ''], ['Fernet Romana', ''],
+      ['Gin Tônica Nacional', ''], ['Gin Tônica Bulldog', ''], ['Mojito', ''], ['Manhattan', ''],
+      ['Coquetel Alice', 'Suco de abacaxi, laranja e creme de leite.'], ['Coquetel de Frutas', 'Sucos de frutas e leite condensado.'],
+      ['Caipirinhas', 'Limão, lima da pérsia, abacaxi, morango, kiwi ou frutas vermelhas, com vodka, saquê ou Sagatiba Cristalina.']
+    ]},
+    { grupo: 'Cervejas', items: [['Cerveja Original 600 ml', ''], ['Cerpa Premium', ''], ['Stella Artois', ''], ['Erdinger', ''], ['Malzbier', ''], ['Cerveja 0% álcool', '']] },
+    { grupo: 'Doses e whisky', items: [
+      ['Grappa Italiana', ''], ['Campari', ''], ['Carpano', ''], ['Fernet Branca', ''], ['Gin Nacional', ''], ['Gin Bulldog', ''],
+      ['Vodka Skyy', ''], ['Vodka Importada', ''], ['Rum Bacardi', ''], ['Saquê', ''], ['Sagatiba Cristalina', ''],
+      ['Steinhäger Nacional', ''], ['Steinhäger Importado', ''], ['Whisky 8 anos', ''], ['Whisky 12 anos', ''], ['Bourbon', '']
+    ]},
+    { grupo: 'Cafés e licores', items: [['Expresso', ''], ['Capuccino', ''], ['Licores', 'Licor 43, Frangelico, Cointreau, Drambuie, Amarula e Limoncello.']] }
+  ]
+};
+
+/* ===================== VALORES =====================
+   Substituir pelos valores oficiais do restaurante antes de publicar. */
+const PRECOS = {
+  'Couvert': 14, 'Berinjela Recheada': 42, 'Mussarela de Búfala': 48, 'Porpetas Recheadas': 46, 'Bolinho de Bacalhau': 54,
+  'Sardela': 32, 'Alichela': 34, 'Carpaccio à Bruzzi': 62,
+  'Salada Caprese Montada': 52, 'Salada do Nonno': 58, 'Salada Caprese com Palmito': 54, 'Salada Verde com Palmito': 46,
+  'Nhoque à Moda': 84, 'Espaguetti com Tiras de Mignon e Brócolis': 89, 'Talharim ao Mare': 112, 'Capeletti ao Pesto': 76,
+  'Conchiglione Casaretto': 88, 'Capeletti Parisiense': 79, 'Strudelli': 86, 'Capelini Verdi': 84,
+  'Ao Sugo': 62, 'Basílico': 66, 'Basílico com Camarão': 98, 'Ao Sugo com Porpetas': 78, 'À Bolonhesa': 74, 'Ao Pesto': 72,
+  'Alfredo de Roma': 74, 'Mediterrâneo': 72, 'Napolitana': 72, 'Aos Quatro Queijos': 79, 'Carbonara': 76, 'Romanesca': 78,
+  'Parisiense': 78, 'Puttanesca': 82, 'À Georgia': 112, 'Casaretto': 82, 'Brócolis e Tiras de Filet Mignon': 92,
+  'Escalope de Filé ao Molho Funghi': 108, 'À Moda': 89, 'Pizzaiola': 98, 'Medalhões ao Creme de Queijo Brie': 118, 'À Marinara': 118,
+  'Risoto de Camarão|Pequeno': 96, 'Risoto de Camarão|Médio': 128, 'Risoto de Abobrinha': 82, 'Risoto de Frango': 78,
+  'Risoto de Cordeiro': 112, 'Risoto de Funghi': 98, 'Risoto de Frutos do Mar': 124,
+  'Filet à Parmeggiana': 112, 'Filet à Milaneza': 108, 'Filet ao Molho Funghi': 118, 'Steak au Vert': 124, 'Filet com Legumes': 104,
+  'Filet aos Quatro Queijos': 116, 'Chateaubriand': 128, 'Medalhão Imperial': 126, 'Strogonoff de Filet': 98,
+  'Filet à Piamonteza': 119, 'Chefer Recheado com Catupiry': 114,
+  'Porpetas Recheadas com Gorgonzola': 86, 'Polpetone à Parmegiana': 88, 'Ossobuco ao Próprio Molho': 118, 'Pernil de Cordeiro': 239,
+  'Peixe com Legumes': 92, 'Peixe à Fiorentina': 104, 'Peixe com Molho de Camarão': 112, 'Peixe à Belle Meunière': 116,
+  'Peixe ao Roquefort': 114, 'Moqueca': 132, 'Bacalhau Grelhado': 148, 'Bacalhau ao Forno': 152,
+  'Supremo ao Creme de Milho': 76, 'Supremo Grelhado com Legumes': 72, 'Supremo ao Curry': 78, 'Strogonoff de Frango': 74, 'Supremo à Francesa': 79,
+  'Camarão à Grega': 132, 'Camarão Flambado ao Catupiry': 128, 'Camarão à Termidor': 126, 'Camarão à Bristol': 134, 'Camarão à Baiana': 124,
+  'Tiramissu': 36, 'Petit Gateau': 34, 'Banana Flambada': 32, 'Bavaroise de Maracujá': 28, 'Creme de Papaya': 28,
+  'Sorvetes Häagen-Dazs': 32, 'Frutas da Época': 24,
+  'Água S.Pellegrino 500 ml': 16, 'Água Prata': 8, 'Soda Italiana': 16, 'Suco de Frutas': 14, 'Suco de Tomate': 14, 'Refrigerante': 9,
+  'Aperol Spritz': 42, 'Negroni': 42, 'Campari Milano': 34, 'Campari Tonic': 36, 'Campari Citrus': 36, 'Kir Royal': 44,
+  'Margarita': 38, 'Bloody Mary': 36, 'Pina Colada': 36, 'Fernet Romana': 32, 'Gin Tônica Nacional': 34, 'Gin Tônica Bulldog': 48,
+  'Mojito': 34, 'Manhattan': 42, 'Coquetel Alice': 22, 'Coquetel de Frutas': 22, 'Caipirinhas': 32,
+  'Cerveja Original 600 ml': 22, 'Cerpa Premium': 24, 'Stella Artois': 16, 'Erdinger': 42, 'Malzbier': 12, 'Cerveja 0% álcool': 14,
+  'Grappa Italiana': 28, 'Campari': 22, 'Carpano': 22, 'Fernet Branca': 24, 'Gin Nacional': 22, 'Gin Bulldog': 34,
+  'Vodka Skyy': 22, 'Vodka Importada': 32, 'Rum Bacardi': 22, 'Saquê': 22, 'Sagatiba Cristalina': 18,
+  'Steinhäger Nacional': 16, 'Steinhäger Importado': 26, 'Whisky 8 anos': 28, 'Whisky 12 anos': 39, 'Bourbon': 34,
+  'Expresso': 8, 'Capuccino': 14, 'Licores': 26
+};
+const brl = v => 'R$ ' + v.toLocaleString('pt-BR');
+const precoDe = (n, tag) => PRECOS[n + '|' + tag] ?? PRECOS[n];
+
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasGSAP = typeof window.gsap !== 'undefined';
+const root = document.getElementById('menuRoot'), chipsEl = document.getElementById('chips');
+const input = document.getElementById('menuSearch'), sWrap = document.getElementById('searchWrap');
+const emptyEl = document.getElementById('menuEmpty'), statusEl = document.getElementById('menuStatus');
+let cat = 'todos', query = '';
+
+const norm = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const esc = s => (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hl = (t, q) => { if (!q) return esc(t); const i = norm(t).indexOf(q); return i < 0 ? esc(t) : esc(t.slice(0, i)) + '<mark>' + esc(t.slice(i, i + q.length)) + '</mark>' + esc(t.slice(i + q.length)); };
+const count = id => (CARDAPIO[id] || []).reduce((t, g) => t + g.items.length, 0);
+const total = Object.keys(CARDAPIO).reduce((t, k) => t + count(k), 0);
+const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>';
+const chevSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+const glassSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M7 2h10l-1 7a4 4 0 0 1-8 0Z"/></svg>';
+
+function renderChips() {
+  chipsEl.innerHTML = CATEGORIAS.map(c => {
+    const n = c.id === 'todos' ? total : (c.id === 'vinhos' ? 0 : count(c.id));
+    return `<button type="button" class="chip" data-cat="${c.id}" aria-pressed="${c.id === cat}">${c.nome}${n ? `<small>${n}</small>` : ''}</button>`;
+  }).join('');
+}
+/* Fotos ilustrativas por tipo de prato (Unsplash). A primeira de cada lista é a reserva. */
+const FOTOS = {
+  entrada: ['1592417817098-8fd3d9eb14a5', '1540189549336-e6e99c3679fe', '1546069901-ba9599a7e63c', '1512621776951-a57141f2eefd'],
+  massa: ['1621996346565-e3dbc646d9a9', '1551183053-bf91a1d81141', '1473093295043-cdd812d0e601', '1563379926898-05f4575a45d8', '1612874742237-6526221588e3', '1555949258-eb67b1ef0ceb', '1598866594230-a7c12756260f'],
+  risoto: ['1476124369491-e7addf5db371', '1633964913295-ceb43826e7c3'],
+  carne: ['1600891964092-4316c288032e', '1546833999-b9f581a1996d', '1558030006-450675393462', '1544025162-d76694265947'],
+  peixe: ['1467003909585-2f8a72700288', '1519708227418-c8fd9a32b7a2', '1485921325833-c519f76c4927'],
+  frango: ['1532550907401-a500c9a57435', '1598103442097-8b74394b95c6'],
+  camarao: ['1565680018434-b513d5e5fd47', '1625943553852-781c6dd46faa'],
+  doce: ['1586040140378-b5634cb4c8fc', '1571877227200-a0d98ea607e9', '1563805042-7684c019e1cb', '1488477181946-6428a0291777', '1551024506-0bccd828d307'],
+  suco: ['1600271886742-f049cd451bba', '1437418747212-8d9709afab22'],
+  drink: ['1514362545857-3bc16c4c7d1b', '1551538827-9c037cb4f32a', '1536935338788-846bb9981813'],
+  cerveja: ['1535958636474-b021ee887b13', '1608270586620-248524c67de9'],
+  cafe: ['1509042239860-f550ce710b93', '1495474472287-4d71bcdd2085']
+};
+const TIPO_GRUPO = { 'Entradas': 'entrada', 'Saladas': 'entrada', 'Risotos': 'risoto', 'Filet Mignon': 'carne', 'Carnes': 'carne', 'Peixes': 'peixe', 'Frango': 'frango', 'Camarão': 'camarao', 'Sobremesas': 'doce', 'Sem álcool': 'suco', 'Drinks e coquetéis': 'drink', 'Cervejas': 'cerveja', 'Doses e whisky': 'drink', 'Cafés e licores': 'cafe' };
+const contadorTipo = {};
+const unsplash = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${w}&q=70`;
+function fotoPara(grupo, cat) {
+  const tipo = TIPO_GRUPO[grupo] || (cat === 'massas' ? 'massa' : 'entrada');
+  const lista = FOTOS[tipo];
+  const i = (contadorTipo[tipo] = (contadorTipo[tipo] ?? -1) + 1) % lista.length;
+  return { src: unsplash(lista[i], 160), fb: unsplash(lista[0], 160) };
+}
+
+function itemHTML([n, d, tag], q, foto, extra) {
+  return `<li class="mitem${extra ? ' extra' : ''}"><figure class="ph thumb m-0"><img src="${foto.src}" data-fallback="${foto.fb}" alt="${esc(n)}" loading="lazy" width="72" height="72"></figure><div class="mbody"><div class="mrow"><h4>${hl(n, q)}</h4><span class="dots" aria-hidden="true"></span>${tag ? `<span class="tag">${esc(tag)}</span>` : ''}${precoDe(n, tag) ? `<span class="price">${brl(precoDe(n, tag))}</span>` : ''}</div>
+    ${d ? `<p>${hl(d, q)}</p>` : ''}
+    <div class="mfoot"><a href="${RESTAURANTE.links.pedido}" target="_blank" rel="noopener" aria-label="Pedir ${esc(n)}">Pedir ${arrowSvg}</a></div></div></li>`;
+}
+function wineHTML() {
+  return `<article class="mcat"><div class="mcat-head"><h3>Vinhos</h3><span>Carta da casa</span></div>
+    <div class="wine"><div class="wine-b">
+      <p class="eyebrow">Carta de vinhos</p>
+      <h4 class="display" style="font-size:1.5rem">Bons encontros merecem <span class="or">bons vinhos</span></h4>
+      <p class="muted mt-3" style="font-size:.9rem;max-width:44ch">O Casaretto mantém uma carta de vinhos própria. Rótulos, safras e valores ficam na carta oficial, atualizada pela casa.</p>
+      <ul><li>${glassSvg}Rótulos e valores na carta oficial</li><li>${glassSvg}Peça sugestões de harmonização no salão</li><li>${glassSvg}Kir Royal e Aperol Spritz entre os drinks</li></ul>
+      <div class="flex flex-wrap gap-3"><a class="btn btn-primary" href="${RESTAURANTE.links.vinhosPdf}" target="_blank" rel="noopener">Abrir carta de vinhos</a><a class="btn btn-outline" href="${RESTAURANTE.links.whatsappGeral}" target="_blank" rel="noopener">Tirar dúvidas</a></div>
+    </div><figure class="ph m-0" data-label="Vinhos"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80" data-fallback="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80" alt="Vinho tinto sendo servido em taça" loading="lazy"></figure></div></article>`;
+}
+/* Prévia do cardápio: poucos pratos até clicar em "Ver cardápio completo" */
+let verTudo = false;
+function render(animate = true) {
+  const q = norm(query.trim());
+  const previa = !q && !verTudo;
+  // "Todos": 1 grupo de cada uma das 3 primeiras categorias, 3 pratos cada.
+  // Categoria escolhida: 2 grupos, 4 pratos cada.
+  const lim = cat === 'todos' ? { cats: 3, grupos: 1, itens: 3 } : { cats: 1, grupos: 2, itens: 4 };
+  let html = '', found = 0, mostrados = 0, catsMostradas = 0;
+  Object.keys(contadorTipo).forEach(k => delete contadorTipo[k]);
+  CATEGORIAS.filter(c => c.id !== 'todos' && (cat === 'todos' || c.id === cat)).forEach(c => {
+    if (c.id === 'vinhos') {
+      if (q) {
+        if (['vinho', 'vinhos', 'carta', 'tinto', 'branco', 'espumante', 'rose'].some(w => w.startsWith(q) || q.startsWith(w))) { found++; mostrados++; html += wineHTML(); }
+      } else {
+        found++;
+        if (!previa || cat === 'vinhos') { mostrados++; html += wineHTML(); }
+      }
+      return;
+    }
+    const groups = CARDAPIO[c.id].map(g => ({ ...g, items: g.items.filter(it => !q || norm(it[0]).includes(q) || norm(it[1]).includes(q) || norm(g.grupo).includes(q)) })).filter(g => g.items.length);
+    if (!groups.length) return;
+    const n = groups.reduce((t, g) => t + g.items.length, 0); found += n;
+    let gs = groups;
+    if (previa) {
+      if (catsMostradas >= lim.cats) return;
+      catsMostradas++;
+      gs = groups.slice(0, lim.grupos).map(g => ({ ...g, items: g.items.slice(0, lim.itens) }));
+    }
+    mostrados += gs.reduce((t, g) => t + g.items.length, 0);
+    html += `<article class="mcat"><div class="mcat-head"><h3>${c.titulo}</h3><span>${n} ${n === 1 ? 'item' : 'itens'}</span></div>
+      ${gs.map(g => `<div class="mgroup"><p class="mgroup-t">${esc(g.grupo)}</p>${g.hint && !q && !previa ? `<p class="mgroup-h">${esc(g.hint)}</p>` : ''}
+        <ul class="mlist">${g.items.map(it => itemHTML(it, q, fotoPara(g.grupo, c.id))).join('')}</ul></div>`).join('')}
+    </article>`;
+  });
+  const ocultos = found - mostrados;
+  if (!q && found && (ocultos > 0 || verTudo)) {
+    html += previa
+      ? `<div class="all-wrap is-preview"><button type="button" class="btn btn-primary all-btn" data-all aria-expanded="false" aria-controls="menuRoot">Ver cardápio completo <b>+${ocultos} ${ocultos === 1 ? 'prato' : 'pratos'}</b> ${chevSvg}</button></div>`
+      : `<div class="all-wrap"><button type="button" class="btn btn-outline all-btn" data-all aria-expanded="true" aria-controls="menuRoot">Ver menos ${chevSvg}</button></div>`;
+  }
+  root.innerHTML = html;
+  emptyEl.classList.toggle('on', !found);
+  statusEl.textContent = !found ? 'Nenhum prato encontrado' : (previa && ocultos > 0 ? `Mostrando ${mostrados} de ${found}` : `${found} resultados`);
+  if (animate && hasGSAP && !reduceMotion) gsap.fromTo(root.querySelectorAll('.mcat-head,.mitem,.wine,.all-wrap'), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .45, ease: 'power2.out', stagger: .012, clearProps: 'transform' });
+  if (hasGSAP && window.ScrollTrigger) ScrollTrigger.refresh();
+}
+function setCat(c, scroll) {
+  cat = c; verTudo = false;
+  chipsEl.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === c));
+  render();
+  if (scroll) document.getElementById('cardapio').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+}
+const clearQ = () => { input.value = ''; query = ''; sWrap.classList.remove('has-value'); };
+chipsEl.addEventListener('click', e => { const b = e.target.closest('.chip'); if (b) setCat(b.dataset.cat); });
+/* "Ver cardápio completo" / "Ver menos" */
+root.addEventListener('click', e => {
+  const b = e.target.closest('[data-all]'); if (!b) return;
+  verTudo = !verTudo;
+  render(true);
+  if (!verTudo) document.getElementById('cardapio').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+});
+let t; input.addEventListener('input', () => { sWrap.classList.toggle('has-value', !!input.value); clearTimeout(t); t = setTimeout(() => { query = input.value; render(); }, 150); });
+document.getElementById('clearSearch').addEventListener('click', () => { clearQ(); render(); input.focus(); });
+document.getElementById('resetMenu').addEventListener('click', () => { clearQ(); setCat('todos'); });
+document.getElementById('searchShortcut').addEventListener('click', () => {
+  document.getElementById('cardapio').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+  setTimeout(() => input.focus({ preventScroll: true }), reduceMotion ? 0 : 700);
+});
+renderChips(); render(false);
+
+/* ===================== HEADER E MENU MOBILE ===================== */
+const header = document.getElementById('header');
+const quick = document.getElementById('quick');
+const onScroll = () => {
+  header.classList.toggle('is-scrolled', scrollY > 30);
+  quick.classList.toggle('is-visible', scrollY > innerHeight * .5);
+};
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const nav = document.getElementById('mobileNav'), openB = document.getElementById('openMenu'), closeB = document.getElementById('closeMenu');
+function toggleNav(o) { nav.classList.toggle('is-open', o); nav.setAttribute('aria-hidden', !o); openB.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; (o ? closeB : openB).focus(); }
+openB.addEventListener('click', () => toggleNav(true));
+closeB.addEventListener('click', () => toggleNav(false));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) toggleNav(false); });
+const links = [...document.querySelectorAll('.nav a')];
+const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + en.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
+['inicio', 'cardapio', 'especiais', 'sobre', 'ambiente', 'avaliacoes', 'contato'].forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+
+if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+
+/* ===================== ANIMAÇÕES ===================== */
+/* Luz que segue o mouse nos cards */
+document.querySelectorAll('.dish,.review,.loc-card').forEach(el => {
+  el.classList.add('spot');
+  el.addEventListener('pointermove', e => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+});
+
+const intro = document.getElementById('intro');
+const plate = document.querySelector('.plate');
+const fmt = n => n.toLocaleString('pt-BR');
+
+if (hasGSAP && window.ScrollTrigger && !reduceMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add('js-anim');
+  const showIntro = !document.documentElement.classList.contains('no-intro');
+  try { sessionStorage.setItem('casarettoIntro', '1'); } catch (e) {}
+
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  if (showIntro) {
+    tl.from('#intro .logo span', { opacity: 0, y: 24, filter: 'blur(10px)', duration: .9, stagger: .15 })
+      .from('#intro .glow', { opacity: 0, scale: .6, duration: 1 }, '<')
+      .to('#intro', { yPercent: -100, duration: 1, ease: 'expo.inOut', delay: .35, onComplete: () => intro.remove() });
+  } else if (intro) intro.remove();
+
+  tl.from('[data-plate] .plate', { opacity: 0, scale: .9, duration: 1.6, onComplete: () => {
+        plate.classList.add('lit'); setTimeout(() => plate.classList.remove('lit'), 1400);
+      } }, showIntro ? '-=.5' : 0)
+    .from('.hero .eyebrow', { opacity: 0, letterSpacing: '.6em', duration: 1.1 }, '<.2')
+    .from('.hero .ln', { opacity: 0, y: 40, filter: 'blur(14px)', duration: 1.1, stagger: .18 }, '<.1')
+    .from('[data-hero]:not(.eyebrow)', { opacity: 0, y: 22, duration: .8, stagger: .1 }, '<.4')
+    .from('.badge', { opacity: 0, scale: .6, rotate: -40, duration: 1 }, '<.2');
+
+  gsap.utils.toArray('[data-reveal]').forEach(el => gsap.fromTo(el,
+    { opacity: 0, y: 30, filter: 'blur(8px)' },
+    { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out', clearProps: 'filter',
+      scrollTrigger: { trigger: el, start: 'top 90%', once: true } }));
+
+  gsap.from('.ornament', { opacity: 0, scale: .4, duration: .9, scrollTrigger: { trigger: '.ornament', start: 'top 90%', once: true } });
+
+  /* Números que contam uma vez */
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const alvo = +el.dataset.count, obj = { v: 0 };
+    ScrollTrigger.create({ trigger: el, start: 'top 92%', once: true, onEnter: () =>
+      gsap.to(obj, { v: alvo, duration: 1.6, ease: 'power2.out', onUpdate: () => el.textContent = fmt(Math.round(obj.v)) }) });
+  });
+
+  /* Parallax suave nas fotos da galeria */
+  gsap.utils.toArray('.gallery img').forEach(img => gsap.fromTo(img, { yPercent: -6, scale: 1.12 }, { yPercent: 6, ease: 'none',
+    scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true } }));
+} else if (intro) intro.remove();
+</script>
+</body>
+</html>
